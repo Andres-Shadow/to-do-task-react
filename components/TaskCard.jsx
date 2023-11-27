@@ -1,4 +1,10 @@
-function TaskCard({ task, deleteTask }) {
+import {useContext} from 'react'
+import {AppContext} from '../context/AppContext'
+
+function TaskCard({ task }) {
+
+  const {deleteTask} = useContext(AppContext)
+
   function handleDelete() {
     deleteTask(task.id);
   }
