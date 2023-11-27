@@ -15,7 +15,8 @@ function TaskForm(){
   };
 
   return (
-    <div>
+    <div className="max-w-md m-auto">
+      <div className="bg-slate-800 p-10 mb-4 rounded-md">
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -24,6 +25,7 @@ function TaskForm(){
             setTaskTtile(e.target.value);
           }}
           value={TaskTitle}
+          className="bg-slate-300 p-3 w-full mb-3 rounded-md text-black"
         />
         <input
           type="text"
@@ -32,9 +34,13 @@ function TaskForm(){
             setTaskDescription(e.target.value);
           }}
           value={TaskDescription}
+          className="bg-slate-300 p-3 w-full mb-3 rounded-md text-black"
         />
-        <button>Agergar Tarea</button>
+        <button
+        className="bg-green-400 text-white p-3 rounded-md w-full hover:bg-green-300"
+        >Agergar Tarea</button>
       </form>
+    </div>
     </div>
   );
 }

@@ -8,14 +8,14 @@ function TaskList() {
 
   if (tasks.length === 0) {
     return (
-      <div>
+      <div className='text-white text-4xl font-bold text-center'>
         <p>No hay tareas</p>
       </div>
     )
   }
 
   return (
-    <div>
+    <div className="grid grid-cols-3 content-center">
       {tasks.map((task) => (
         <TaskCard key={task.id} task={task} />
       ))}
